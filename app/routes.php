@@ -2,10 +2,7 @@
 Route::get('/', array(
     'as' => 'home',
     'uses' => 'HomeController@home',
-    'before' => 'role:admin'
 ));
-
-
 
 Route::get('/terms',array(
     'as' => 'terms',
@@ -37,8 +34,6 @@ Route::post('/contact_me',array(
         'uses' => 'HomeController@postContactMe',
         'before' => ['csrf'],
     ));
-
-
 
 
 /*Route::get('/account/sign_in',array(
@@ -178,10 +173,3 @@ Route::get('/admin/buyers', array(
     'uses' => 'AdminController@postbuyers',
     ));
 
-
-Route::get('test',function(){
-    $buyers = new \Ccp\Admin\Buyers;
-    return $buyers->getBuyers();
-
-}
-);

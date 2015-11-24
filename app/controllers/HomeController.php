@@ -4,10 +4,7 @@ class HomeController extends BaseController {
 
     public function home(){
 
-        $user = User::first();
-
         $role = Role::whereName('admin')->first();
-        $user->assignRole($role);
         $sell = "no"; $buy = "no";
         if(Sell::where('activate','=',0)->sum('amount') < Config::get('constants.sell_avialable_dollar')){
                 $sell = 'yes';
