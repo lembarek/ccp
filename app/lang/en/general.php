@@ -45,4 +45,5 @@ return array(
 	'lang' => 'langue',
 	'next' => 'next',
 	'prev' => 'prev',
+        'info' => 'info',
 	);

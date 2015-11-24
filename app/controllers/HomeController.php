@@ -57,4 +57,14 @@ class HomeController extends BaseController {
             }
         }
     }
+
+    /**
+     * show the informaiton about the us
+     *
+     * @return void
+     */
+    public function info()
+    {
+        return  View::make('general.info');
+    }
 }

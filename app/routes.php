@@ -168,6 +168,14 @@ Route::get('/admin/buyers/search', array(
     ));
 
 
+Route::get('/info', [
+    'as' => 'info',
+    'uses' => 'HomeController@info',
+    ]);
+
+
+
+
 Route::get('/admin/buyers', array(
     'as' => 'admin_buyers',
     'uses' => 'AdminController@postbuyers',
