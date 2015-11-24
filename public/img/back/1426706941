@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Scientific WorkPlace 5.5
-Exec=env WINEPREFIX="/root/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /root/.wine/dosdevices/c:/users/Public/Desktop/Scientific\\ WorkPlace\\ 5.5.lnk
-Type=Application
-StartupNotify=true
-Path=/root/.wine/dosdevices/c:/swp55
-Icon=9DC2_swp-pro.0

@@ -16,9 +16,10 @@
 			<input type="hidden" name="custum" value="{{ $custum }}" >
 
 			<div class="form-group">
-		        <div class=" col-sm-offset-2 col-sm-10">
-		            <input class="btn btn-success" type='submit' value="{{ Lang::get('ccp.go2paypal') }}"/>
-		       </div>
+                            <div class=" col-sm-offset-2 col-sm-10">
+                                <input class="btn btn-success" type='submit' value="{{ Lang::get('ccp.go2paypal') }}"/>
+                            </div>
+                        </div>
     		</div>
 	</form>
 </div>

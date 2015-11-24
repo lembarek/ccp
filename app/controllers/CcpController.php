@@ -22,46 +22,46 @@ class CcpController extends BaseController{
 			return Redirect::route('sell')
 				->withErrors($validator)
 				->withInput();
-		}else{
-				$sell = Sell::where('amount','=',Input::get('amount'))
-							->where('ccp','=',Input::get('ccp'))
-							->where('first_name','=',Input::get('first_name'))
-							->where('last_name','=',Input::get('last_name'))
-                                                        ->where('paypal','=',Input::get('paypal'))
-                                                        ->where('paypal_first_name','=',Input::get('paypal_first_name'))
-                                                        ->where('paypal_last_name','=',Input::get('paypal_last_name'))
-							->where('email','=',Input::get('email'))
-							->where('phone_number','=',Input::get('phone_number'));
-				if($sell->count() == 0){
-					$sell = Sell::create(array(
-						'amount' => Input::get('amount'),
-						'ccp' => Input::get('ccp'),
-						'first_name' => Input::get('first_name'),
-						'last_name' => Input::get('last_name'),
-                                                'paypal' => Input::get('paypal'),
-                                                'paypal_first_name' => Input::get('paypal_first_name'),
-                                                'paypal_last_name' => Input::get('paypal_last_name'),
-						'email' => Input::get('email'),
-						'phone_number' => Input::get('phone_number'),
-						'activate' => 0,
-						'txt_id' => 0,
-						'finish' => 0,
-					));
-					if($sell){
-					return View::make('ccp.check')
-						->with('amount',Input::get('amount'))
-						->with('custum',$sell->id);
-					}
-				}
-				else{
-					$sell =  $sell->first();
-					return View::make('ccp.check')
-						->with('info', Lang::get('ccp.sell_exist'))
-						->with('amount',Input::get('amount'))
-						->with('custum',$sell->id);
-				}
+		}{
 
-		}
+                $sell = Sell::where('amount','=',Input::get('amount'))
+                                        ->where('ccp','=',Input::get('ccp'))
+                                        ->where('first_name','=',Input::get('first_name'))
+                                        ->where('last_name','=',Input::get('last_name'))
+                                        ->where('paypal','=',Input::get('paypal'))
+                                        ->where('paypal_first_name','=',Input::get('paypal_first_name'))
+                                        ->where('paypal_last_name','=',Input::get('paypal_last_name'))
+                                        ->where('email','=',Input::get('email'))
+                                        ->where('phone_number','=',Input::get('phone_number'));
+                if($sell->count() == 0){
+                        $sell = Sell::create(array(
+                                'amount' => Input::get('amount'),
+                                'ccp' => Input::get('ccp'),
+                                'first_name' => Input::get('first_name'),
+                                'last_name' => Input::get('last_name'),
+                                'paypal' => Input::get('paypal'),
+                                'paypal_first_name' => Input::get('paypal_first_name'),
+                                'paypal_last_name' => Input::get('paypal_last_name'),
+                                'email' => Input::get('email'),
+                                'phone_number' => Input::get('phone_number'),
+                                'activate' => 0,
+                                'txt_id' => 0,
+                                'finish' => 0,
+                        ));
+                        if($sell){
+                        return View::make('ccp.check')
+                                ->with('amount',Input::get('amount'))
+                                ->with('custum',$sell->id);
+                        }
+                }
+                else{
+                        $sell =  $sell->first();
+                        return View::make('ccp.check')
+                                ->with('info', Lang::get('ccp.sell_exist'))
+                                ->with('amount',Input::get('amount'))
+                                ->with('custum',$sell->id);
+                }
+
 		return Input::get();
 	}
 
