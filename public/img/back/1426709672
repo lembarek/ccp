@@ -1,0 +1,263 @@
+console.error: darkbackground: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File "resource://gre/modules/Promise-backend.js", line 870, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/Task.jsm", line 330, in TaskImpl_run
+    let yielded = aSendResolved ? this._iterator.send(aSendValue)
+  File "self-hosted", line 615, in next
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/io.js", line 182, in exports.IO.readFromFile/<
+    onProgress(data);
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/io.js", line 97, in exports.IO.readFromFile/onProgress
+    listener.process(lines[i]);
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/filterStorage.js", line 870, in INIParser.prototype.process
+    Utils.yield();
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/utils.js", line 380, in exports.Utils.yield
+    while (thread.processNextEvent(false));
+  File "resource://gre/modules/Promise-backend.js", line 691, in this.PromiseWalker.scheduleWalkerLoop/<
+    DOMPromise.resolve().then(() => this.walkerLoop());
+  File "resource://gre/modules/Promise-backend.js", line 749, in this.PromiseWalker.walkerLoop
+    this.handlers.shift().process();
+  File "resource://gre/modules/Promise-backend.js", line 870, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/commonjs/sdk/addon/runner.js", line 86, in startup/</<
+    run(options);
+  File "resource://gre/modules/commonjs/sdk/addon/runner.js", line 145, in run
+    let program = main(options.loader, options.main);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 684, in main
+    return loader.load(loader, module).exports;
+  File "resource://gre/modules/commonjs/sdk/loader/cuddlefish.js", line 129, in CuddlefishLoader/options<.load
+    result = load(loader, module);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 318, in load
+    evaluate(sandbox, module.uri);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 267, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File "resource://jid1-agzbn6dsbjwp3a-at-jetpack/darkbackground/lib/main.js", line 6, in null
+    var widgets = require("sdk/widget");
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 591, in require
+    freeze(load(loader, module));
+  File "resource://gre/modules/commonjs/sdk/loader/cuddlefish.js", line 129, in CuddlefishLoader/options<.load
+    result = load(loader, module);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 318, in load
+    evaluate(sandbox, module.uri);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 267, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File "resource://gre/modules/commonjs/sdk/widget.js", line 59, in null
+    require("./util/deprecate").deprecateUsage(
+  File "resource://gre/modules/commonjs/sdk/util/deprecate.js", line 18, in deprecateUsage
+    let stack = get().slice(2);
+console.error: dark-background-light-text: 
+  Message: TypeError: Object.defineProperty(...) is read-only
+console.error: darkbackground: 
+  DEPRECATED: The widget module is deprecated.  Please consider using the sdk/ui module instead.
+Traceback (most recent call last):
+  File "resource://gre/modules/Promise-backend.js", line 870, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/Task.jsm", line 330, in TaskImpl_run
+    let yielded = aSendResolved ? this._iterator.send(aSendValue)
+  File "self-hosted", line 615, in next
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/io.js", line 182, in exports.IO.readFromFile/<
+    onProgress(data);
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/io.js", line 97, in exports.IO.readFromFile/onProgress
+    listener.process(lines[i]);
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/filterStorage.js", line 870, in INIParser.prototype.process
+    Utils.yield();
+  File "jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/lib/utils.js", line 380, in exports.Utils.yield
+    while (thread.processNextEvent(false));
+  File "resource://gre/modules/Promise-backend.js", line 691, in this.PromiseWalker.scheduleWalkerLoop/<
+    DOMPromise.resolve().then(() => this.walkerLoop());
+  File "resource://gre/modules/Promise-backend.js", line 749, in this.PromiseWalker.walkerLoop
+    this.handlers.shift().process();
+  File "resource://gre/modules/Promise-backend.js", line 870, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/commonjs/sdk/addon/runner.js", line 86, in startup/</<
+    run(options);
+  File "resource://gre/modules/commonjs/sdk/addon/runner.js", line 145, in run
+    let program = main(options.loader, options.main);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 684, in main
+    return loader.load(loader, module).exports;
+  File "resource://gre/modules/commonjs/sdk/loader/cuddlefish.js", line 129, in CuddlefishLoader/options<.load
+    result = load(loader, module);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 318, in load
+    evaluate(sandbox, module.uri);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 267, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File "resource://jid1-agzbn6dsbjwp3a-at-jetpack/darkbackground/lib/main.js", line 6, in null
+    var widgets = require("sdk/widget");
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 591, in require
+    freeze(load(loader, module));
+  File "resource://gre/modules/commonjs/sdk/loader/cuddlefish.js", line 129, in CuddlefishLoader/options<.load
+    result = load(loader, module);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 318, in load
+    evaluate(sandbox, module.uri);
+  File "resource://gre/modules/commonjs/toolkit/loader.js", line 267, in evaluate
+    : loadSubScript(uri, sandbox, encoding);
+  File "resource://gre/modules/commonjs/sdk/widget.js", line 59, in null
+    require("./util/deprecate").deprecateUsage(
+  File "resource://gre/modules/commonjs/sdk/util/deprecate.js", line 18, in deprecateUsage
+    let stack = get().slice(2);
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************
+*************************
+A coding exception was thrown in a Promise resolution callback.
+See https://developer.mozilla.org/Mozilla/JavaScript_code_modules/Promise.jsm/Promise
+
+Full message: TypeError: xml.entries is undefined
+Full stack: server.Email/<.execute/<@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///root/.mozilla/firefox/rb8ydqcz.default/extensions/jid0-GjwrPchS3Ugt7xydvqVK4DQk8Ls@jetpack.xpi!/bootstrap.js -> resource://gre/modules/commonjs/toolkit/loader.js -> resource://jid0-gjwrpchs3ugt7xydvqvk4dqk8ls-at-jetpack/ignotifier/lib/utils/server.js:152:15
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:870:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:749:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:691:37
+
+*************************

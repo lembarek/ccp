@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Internet Download Manager
+Exec=env WINEPREFIX="/root/.wine" wine C:\\\\Program\\ Files\\\\Internet\\ Download\\ Manager\\\\IDMan.exe 
+Type=Application
+StartupNotify=true
+Icon=43C7_IDMan.0
