@@ -1,7 +1,15 @@
 @extends('layout.main')
 
 @section('content')
-	<div class="row row-eq-height">
+                <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-center">
+                                    {{ lang::get('pages/home.description'); }}
+                                </h4>
+                            </div>
+                        </div>
+                <div class="row row-eq-height">
+
 		<div id="buy"  class="col-sm-6 col-md-5 col-lg-4  col-md-offset-1 col-lg-offset-2" >
 			<div class="panel panel-default">
 				@if($buy == "yes")
