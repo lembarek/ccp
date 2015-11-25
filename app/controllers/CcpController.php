@@ -22,7 +22,7 @@ class CcpController extends BaseController{
 			return Redirect::route('sell')
 				->withErrors($validator)
 				->withInput();
-		}{
+		}
 
                 $sell = Sell::where('amount','=',Input::get('amount'))
                                         ->where('ccp','=',Input::get('ccp'))
