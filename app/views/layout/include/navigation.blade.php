@@ -1,10 +1,11 @@
 <nav class="navbar navbar-default  ">
+  <div class="container-fluid">
 	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
-	      <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-		</button>
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+	  </button>
 	</div>
 	<div class="collapse navbar-collapse" id="collapse">
 	    <ul class="nav  navbar-nav nav-responsive navbar-left">
@@ -23,6 +24,5 @@
 	    </ul>
 
 	 </div>
-
-
+   </div>
 </nav>

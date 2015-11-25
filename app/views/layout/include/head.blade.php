@@ -12,5 +12,5 @@
         {{ HTML::script('js/functions.js') }}
     </head>
     <body>
+@include('layout.include.navigation')
 <div class="container">
-    	@include('layout.include.navigation')
