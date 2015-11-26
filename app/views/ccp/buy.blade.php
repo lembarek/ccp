@@ -1,8 +1,10 @@
 @extends('layout.main')
 
 @section('content')
-<div>
+<table class="table">
 	<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ URL::route('buy') }}">
+    <tr class="row">
+        <td class="col-md-6">
 		<div class="form-group">
 			<label class="control-label col-sm-3">{{ Lang::get('ccp.paypal') }}</label>
 			<div>
@@ -14,6 +16,8 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
+        </td>
+         <td class="col-md-6">
 		<div class="form-group">
 			<label class="control-label col-sm-3">{{ Lang::get('ccp.amount') }}</label>
 			<div>
@@ -25,34 +29,41 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
+        </td>
+    </tr>
 
+    <tr class="row">
+        <td class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="img_back">{{ Lang::get('ccp.img_back') }}</label>
+                <div>
+                <input type="file" name="img_back"  >
+                </div>
+                @if($errors->has('img_back'))
+                <div class="help-block col-sm-4">{{ $errors->first('img_back')  }}</div>
+                @else
+                <div class="help-block col-sm-4"></div>
+                @endif
+            </div>
+        </td>
 
- <div class="form-group">
-     <label class="control-label col-sm-3" for="img_back">{{ Lang::get('ccp.img_back') }}</label>
-     <div>
-    <input type="file" name="img_back"  >
-    </div>
-     @if($errors->has('img_back'))
-    <div class="help-block col-sm-4">{{ $errors->first('img_back')  }}</div>
-     @else
-      <div class="help-block col-sm-4"></div>
-    @endif
- </div>
+        <td class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="img_front">{{Lang::get('ccp.img_front') }}</label>
+                <div>
+                <input type="file" name="img_front">
+                </div>
+                @if($errors->has('img_front'))
+                <div class="help-block col-sm-4"> {{  $errors->first('img_front')  }}</div>
+                @else
+                <div class="help-block col-sm-4"></div>
+                @endif
+            </div>
+        </td>
+    </tr>
 
-
-
- <div class="form-group">
-     <label class="control-label col-sm-3" for="img_front">{{Lang::get('ccp.img_front') }}</label>
-     <div>
-    <input type="file" name="img_front">
-    </div>
-     @if($errors->has('img_front'))
-    <div class="help-block col-sm-4"> {{  $errors->first('img_front')  }}</div>
-     @else
-      <div class="help-block col-sm-4"></div>
-    @endif
- </div>
-
+    <tr class="row">
+        <td class="col-md-6">
 		<div class="form-group">
 			<label class="control-label col-sm-3">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
 			<div>
@@ -64,8 +75,10 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
+        </td>
+        <td class="col-md-6">
 		<div class="form-group">
-				<label class="control-label col-sm-3">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
+			<label class="control-label col-sm-3">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
 			<div>
 				<input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  >
 			</div>
@@ -75,14 +88,20 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
-		{{  Form::token() }}
-		<div class="form-group">
+        </td>
+    </tr>
+    <tr class="row">
+    <td class="col-md-6"></td>
+    <td class="col-md-6">
+        {{  Form::token() }}
+    <div class="form-group">
         <div class=" col-sm-offset-4 col-sm-10">
             <input class="btn btn-success " type='submit' value="{{ Lang::get('ccp.buy_submit') }}"/>
         </div>
     </div>
+    </td>
 	</form>
-</div>
+</table>
 
 
 @endsection
