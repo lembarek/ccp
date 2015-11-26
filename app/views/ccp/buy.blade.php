@@ -1,12 +1,12 @@
 @extends('layout.main')
 
 @section('content')
-<table class="table">
+<div>
 	<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ URL::route('buy') }}">
-    <tr class="row">
-        <td class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
 		<div class="form-group">
-			<label class="control-label col-sm-3">{{ Lang::get('ccp.paypal') }}</label>
+			<label class="condivol-label col-sm-3">{{ Lang::get('ccp.paypal') }}</label>
 			<div>
 				<input type="email" name="paypal"  {{ (Input::old('paypal'))? 'value='.e(Input::old('paypal')):'' }} >
 			</div>
@@ -16,10 +16,10 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
-        </td>
-         <td class="col-md-6">
+        </div>
+         <div class="col-md-6">
 		<div class="form-group">
-			<label class="control-label col-sm-3">{{ Lang::get('ccp.amount') }}</label>
+			<label class="condivol-label col-sm-3">{{ Lang::get('ccp.amount') }}</label>
 			<div>
 				<input type="number" name="amount" {{ (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }}>
 			</div>
@@ -29,13 +29,13 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
-        </td>
-    </tr>
+        </div>
+    </div>
 
-    <tr class="row">
-        <td class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
             <div class="form-group">
-                <label class="control-label col-sm-3" for="img_back">{{ Lang::get('ccp.img_back') }}</label>
+                <label class="condivol-label col-sm-3" for="img_back">{{ Lang::get('ccp.img_back') }}</label>
                 <div>
                 <input type="file" name="img_back"  >
                 </div>
@@ -45,11 +45,11 @@
                 <div class="help-block col-sm-4"></div>
                 @endif
             </div>
-        </td>
+        </div>
 
-        <td class="col-md-6">
+        <div class="col-md-6">
             <div class="form-group">
-                <label class="control-label col-sm-3" for="img_front">{{Lang::get('ccp.img_front') }}</label>
+                <label class="condivol-label col-sm-3" for="img_front">{{Lang::get('ccp.img_front') }}</label>
                 <div>
                 <input type="file" name="img_front">
                 </div>
@@ -59,13 +59,13 @@
                 <div class="help-block col-sm-4"></div>
                 @endif
             </div>
-        </td>
-    </tr>
+        </div>
+    </div>
 
-    <tr class="row">
-        <td class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
 		<div class="form-group">
-			<label class="control-label col-sm-3">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
+			<label class="condivol-label col-sm-3">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
 			<div>
 				<input type="email" name="email"  {{ (Input::old('email'))? 'value='.e(Input::old('email')):'' }} >
 			</div>
@@ -75,10 +75,10 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
-        </td>
-        <td class="col-md-6">
+        </div>
+        <div class="col-md-6">
 		<div class="form-group">
-			<label class="control-label col-sm-3">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
+			<label class="condivol-label col-sm-3">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
 			<div>
 				<input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  >
 			</div>
@@ -88,18 +88,16 @@
 	           <div class="help-block col-sm-4"></div>
 	        @endif
 		</div>
-        </td>
-    </tr>
-    <tr class="row">
-    <td class="col-md-6"></td>
-    <td class="col-md-6">
-        {{  Form::token() }}
-    <div class="form-group">
-        <div class=" col-sm-offset-4 col-sm-10">
-            <input class="btn btn-success " type='submit' value="{{ Lang::get('ccp.buy_submit') }}"/>
         </div>
     </div>
-    </td>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                    {{  Form::token() }}
+                <div class="form-group">
+                        <input class="btn btn-success " type='submit' value="{{ Lang::get('ccp.buy_submit') }}"/>
+                </div>
+            </div>
+    </div>
 	</form>
 </table>
 
