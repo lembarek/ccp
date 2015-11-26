@@ -9,6 +9,7 @@
             {{ HTML::style('bootstrap/css/bootstrap.css') }}
         @endif
         {{ HTML::style('css/main.css') }}
+        {{ HTML::style('css/steps.css') }}
         {{ HTML::script('js/functions.js') }}
     </head>
     <body>

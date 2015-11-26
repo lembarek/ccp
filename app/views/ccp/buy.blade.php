@@ -1,105 +1,73 @@
 @extends('layout.main')
 
 @section('content')
-<div>
-	<form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{ URL::route('buy') }}">
-    <div class="row">
-        <div class="col-md-6">
-		<div class="form-group">
-			<label class="condivol-label col-sm-3">{{ Lang::get('ccp.paypal') }}</label>
-			<div>
-				<input type="email" name="paypal"  {{ (Input::old('paypal'))? 'value='.e(Input::old('paypal')):'' }} >
-			</div>
-			@if($errors->has('paypal'))
-	           <div class="help-block col-sm-4">{{ $errors->first('paypal') }}</div>
-	        @else
-	           <div class="help-block col-sm-4"></div>
-	        @endif
-		</div>
+<div class="stepwizard">
+    <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+            <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+            <p>Step 1</p>
         </div>
-         <div class="col-md-6">
-		<div class="form-group">
-			<label class="condivol-label col-sm-3">{{ Lang::get('ccp.amount') }}</label>
-			<div>
-				<input type="number" name="amount" {{ (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }}>
-			</div>
-			@if($errors->has('amount'))
-	           <div class="help-block col-sm-4">{{ $errors->first('amount') }}</div>
-	        @else
-	           <div class="help-block col-sm-4"></div>
-	        @endif
-		</div>
+        <div class="stepwizard-step">
+            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+            <p>Step 2</p>
+        </div>
+        <div class="stepwizard-step">
+            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+            <p>Step 3</p>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label class="condivol-label col-sm-3" for="img_back">{{ Lang::get('ccp.img_back') }}</label>
-                <div>
-                <input type="file" name="img_back"  >
-                </div>
-                @if($errors->has('img_back'))
-                <div class="help-block col-sm-4">{{ $errors->first('img_back')  }}</div>
-                @else
-                <div class="help-block col-sm-4"></div>
-                @endif
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label class="condivol-label col-sm-3" for="img_front">{{Lang::get('ccp.img_front') }}</label>
-                <div>
-                <input type="file" name="img_front">
-                </div>
-                @if($errors->has('img_front'))
-                <div class="help-block col-sm-4"> {{  $errors->first('img_front')  }}</div>
-                @else
-                <div class="help-block col-sm-4"></div>
-                @endif
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-		<div class="form-group">
-			<label class="condivol-label col-sm-3">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
-			<div>
-				<input type="email" name="email"  {{ (Input::old('email'))? 'value='.e(Input::old('email')):'' }} >
-			</div>
-			@if($errors->has('email'))
-	           <div class="help-block col-sm-4">{{ $errors->first('email') }}</div>
-	        @else
-	           <div class="help-block col-sm-4"></div>
-	        @endif
-		</div>
-        </div>
-        <div class="col-md-6">
-		<div class="form-group">
-			<label class="condivol-label col-sm-3">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
-			<div>
-				<input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  >
-			</div>
-			@if($errors->has('phone_number'))
-	           <div class="help-block col-sm-4">{{ $errors->first('phone_number') }}</div>
-	        @else
-	           <div class="help-block col-sm-4"></div>
-	        @endif
-		</div>
-        </div>
-    </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-6">
-                    {{  Form::token() }}
+</div>
+<form role="form" method="post" enctype="multipart/form-data" action="{{ URL::route('buy') }}" >
+   {{  Form::token() }}
+    <div class="row setup-content" id="step-1">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 1</h3>
                 <div class="form-group">
-                        <input class="btn btn-success " type='submit' value="{{ Lang::get('ccp.buy_submit') }}"/>
+                    <label class="control-label">{{ Lang::get('ccp.paypal') }}</label>
+                    <input type="email" name="paypal"  {{ (Input::old('paypal'))? 'value='.e(Input::old('paypal')):'' }}   maxlength="100"  required="required" class="form-control" placeholder=""  />
                 </div>
+                <div class="form-group">
+                    <label class="control-label">{{ Lang::get('ccp.amount') }}</label>
+                    <input type="number" name="amount" {{ (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }}   maxlength="100" required="required" class="form-control" placeholder="" />
+                </div>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
             </div>
+        </div>
     </div>
-	</form>
-</table>
-
+    <div class="row setup-content" id="step-2">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 2</h3>
+                <div class="form-group">
+                    <label class="control-label">{{ Lang::get('ccp.img_back') }}</label>
+                    <input type="file" name="img_back" required="required"  placeholder="Enter Company Name"  >
+                </div>
+                <div class="form-group">
+                    <label class="control-label">{{Lang::get('ccp.img_front') }}</label>
+                    <input type="file" name="img_front">
+                </div>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="row setup-content" id="step-3">
+        <div class="col-xs-12">
+            <div class="col-md-12">
+                <h3> Step 3</h3>
+                 <div class="form-group">
+                    <label class="control-label">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
+	            <input type="email" name="email"  {{ (Input::old('email'))? 'value='.e(Input::old('email')):'' }} maxlength="100" class="form-control" placeholder="" >
+                </div>
+                 <div class="form-group">
+                    <label class="control-label">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
+                    <input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  maxlength="100" class="form-control" placeholder=""    >
+                </div>
+                <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+            </div>
+        </div>
+    </div>
+    <br/>
+</form>
 
 @endsection
