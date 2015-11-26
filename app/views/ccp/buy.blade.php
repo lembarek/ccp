@@ -39,14 +39,29 @@
         <div class="col-xs-12">
             <div class="col-md-12">
                 <h3> Step 2</h3>
-                <div class="form-group">
-                    <label class="control-label">{{ Lang::get('ccp.img_back') }}</label>
-                    <input type="file" name="img_back" required="required"  placeholder="Enter Company Name"  >
-                </div>
-                <div class="form-group">
-                    <label class="control-label">{{Lang::get('ccp.img_front') }}</label>
-                    <input type="file" name="img_front">
-                </div>
+
+            <h4>{{ Lang::get('ccp.img_back') }}</h4>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                        Browse&hellip;
+                        <input type="file" name="img_back" required="required"  >
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+            </div>
+
+             <h4>{{Lang::get('ccp.img_front') }}</h4>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-file">
+                        Browse&hellip;
+                        <input type="file" name="img_front" required="required" >
+                    </span>
+                </span>
+                <input type="text" class="form-control" readonly>
+              </div>
+                <br/>
                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
             </div>
         </div>
