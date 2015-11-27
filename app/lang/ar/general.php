@@ -42,5 +42,10 @@ return array(
 	'name' => 'الإسم',
 	'password_again' => 'كرر كلمة المرور',
 	'create_account' => 'إنشاء حساب',
-	'lang' => 'اللغة'
+	'lang' => 'اللغة',
+	'next' => 'التالي',
+	'prev' => 'السابق',
+        'info' => 'معلومات',
+        'finish' => 'إنتهاء',
+
 	);
