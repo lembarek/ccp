@@ -36,7 +36,7 @@
                     <label class="control-label">{{ Lang::get('ccp.ccp') }}</label>
                     <input type="number" name="ccp"  {{ (Input::old('ccp'))? 'value='.e(Input::old('ccp')):'' }}   maxlength="100" required="required" class="form-control" placeholder="" />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >{{ Lang::get('next') }}</button>
+                <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="button" >{{ Lang::get('general.next') }}</button>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@
                     <label class="control-label">{{ Lang::get('general.last_name') }}</label>
                     <input type="text" name="last_name"  {{ (Input::old('last_name'))? 'value='.e(Input::old('last_name')):'' }}  maxlength="100" required="required" class="form-control" placeholder="" />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >{{ Lang::get('next') }}</button>
+                <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="button" >{{ Lang::get('general.next') }}</button>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
                     <label class="control-label">{{ Lang::get('ccp.paypal_last_name') }}</label>
                     <input type="text" name="paypal_last_name"  {{ Input::old('paypal_last_name')? "value='".Input::old('paypal_last_name')."'":""  }} maxlength="100" required="required" class="form-control" placeholder="" />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >{{ Lang::get('next') }}</button>
+                <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="button" >{{ Lang::get('general.next') }}</button>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@
                     <label class="control-label">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
                     <input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  maxlength="100" class="form-control" placeholder=""    >
                 </div>
-                <button class="btn btn-success btn-lg pull-right" type="submit">{{ Lang::get('finish') }}</button>
+                <button class="btn btn-success btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="submit">{{ Lang::get('general.finish') }}</button>
             </div>
         </div>
     </div>
