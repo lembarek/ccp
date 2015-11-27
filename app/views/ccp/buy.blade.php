@@ -31,7 +31,7 @@
                     <label class="control-label">{{ Lang::get('ccp.amount') }}</label>
                     <input type="number" name="amount" {{ (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }}   maxlength="100" required="required" class="form-control" placeholder="" />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >{{ Lang::get('general.next') }}</button>
+                <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?> " type="button" >{{ Lang::get('general.next') }}</button>
             </div>
         </div>
     </div>
