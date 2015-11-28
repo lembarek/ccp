@@ -13,5 +13,5 @@ return [
 		'skype_account' => 'skype_account',
 		'facebook_account' => 'facebook_account',
 		'ccp_infos' => '34534534534<br/>benghezala lembarek',
-                'paypal_account' => 'aissa2010@paypal.com'
+                'paypal_account' => 'raghdiaissa@gmail.com'
 ];
