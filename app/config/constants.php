@@ -5,7 +5,7 @@ return [
 		'sell_min_dollar' => 10,
 		'buy_max_dollar' =>  100,
 		'buy_min_dollar' => 10,
-		'sell_avialable_dollar' => 1000,
+		'sell_avialable_dollar' => 0,
 		'buy_avialable_dollar' => 1000,
 		'mobilis_phone' => '0698935906',
 		'djezzy_phone' => '0765768765',
