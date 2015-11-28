@@ -24,7 +24,7 @@ return array(
 	'rejected' => 'rejected',
 	'all' => 'all',
 	'remember-me' => 'remember me',
-	'copyright' => "all right reserved Aissa Raghdi adn  Benghezala Lembarek",
+	'copyright' => "all right reserved Aissa Raghdi and  Benghezala Lembarek",
 	'terms' => 'terms',
 	'about_me' => 'about us',
 	'about_me_text' => "I'm just a web developper",
