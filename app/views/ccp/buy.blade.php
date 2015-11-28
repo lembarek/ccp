@@ -26,10 +26,16 @@
                 <div class="form-group">
                     <label class="control-label">{{ Lang::get('ccp.paypal') }}</label>
                     <input type="email" name="paypal"  {{ (Input::old('paypal'))? 'value='.e(Input::old('paypal')):'' }}   maxlength="100"  required="required" class="form-control" placeholder=""  />
+                    @if($errors->has('paypal'))
+                        <div class="help-block col-sm-4">{{ $errors->first('paypal') }}</div>
+                    @endif
                 </div>
                 <div class="form-group">
                     <label class="control-label">{{ Lang::get('ccp.amount') }}</label>
                     <input type="number" name="amount" {{ (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }}   maxlength="100" required="required" class="form-control" placeholder="" />
+                    @if($errors->has('amount'))
+                        <div class="help-block col-sm-4">{{ $errors->first('amount') }}</div>
+                    @endif
                 </div>
                 <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?> " type="button" >{{ Lang::get('general.next') }}</button>
             </div>
@@ -48,6 +54,9 @@
                     </span>
                 </span>
                 <input type="text" class="form-control" readonly>
+                @if($errors->has('img_back'))
+                <div class="help-block col-sm-4">{{ $errors->first('img_back')  }}</div>
+                @endif
             </div>
 
              <h4>{{Lang::get('ccp.img_front') }}</h4>
@@ -59,6 +68,10 @@
                     </span>
                 </span>
                 <input type="text" class="form-control" readonly>
+                @if($errors->has('img_front'))
+                    <div class="help-block col-sm-4"> {{  $errors->first('img_front')  }}</div>
+                @endif
+
               </div>
                 <br/>
                 <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="button" >{{ Lang::get('general.next') }}</button>
@@ -71,11 +84,17 @@
                 <h3> {{ Lang::get('steps.step3') }} </h3>
                  <div class="form-group">
                     <label class="control-label">{{ Lang::get('general.email') }}({{ Lang::get('general.optional') }})</label>
-	            <input type="email" name="email"  {{ (Input::old('email'))? 'value='.e(Input::old('email')):'' }} maxlength="100" class="form-control" placeholder="" >
+                    <input type="email" name="email"  {{ (Input::old('email'))? 'value='.e(Input::old('email')):'' }} maxlength="100" class="form-control" placeholder="" >
+                    @if($errors->has('email'))
+                    <div class="help-block col-sm-4">{{ $errors->first('email') }}</div>
+                    @endif
                 </div>
                  <div class="form-group">
                     <label class="control-label">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
                     <input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  maxlength="100" class="form-control" placeholder=""    >
+                    @if($errors->has('phone_number'))
+                        <div class="help-block col-sm-4">{{ $errors->first('phone_number') }}</div>
+                    @endif
                 </div>
                 <button class="btn btn-success btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="submit">{{ Lang::get('general.finish') }}!</button>
             </div>
