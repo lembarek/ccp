@@ -22,7 +22,7 @@
                                         </div>
 			 	@elseif($buy == "no")
                                         <div class="panel-heading">
-			 		    <h2>{{ Lang::get('ccp.buy_h1_try_later') }}</h2>
+					    <h2>{{ Lang::get('ccp.buy_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
 			 		    <p> {{ Lang::get('ccp.buy_desc_try_later') }} </p>
@@ -44,7 +44,7 @@
                                         </div>
 				@elseif($sell == "no")
                                         <div class="panel-heading">
-					    <h2> {{ Lang::get('ccp.sell_h1_try_later') }} </h2>
+					    <h2> {{ Lang::get('ccp.sell_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
 					    <p> {{ Lang::get('ccp.sell_desc_try_later') }} </p>

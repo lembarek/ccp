@@ -28,6 +28,6 @@ return array(
         'paypal_first_name' => 'paypal first name',
         'paypal_last_name' => 'paypal last name',
         'paypal_account' => 'paypal account',
-        'img_back' => 'image back',
-        'img_front' => 'image front'
+        'img_back' => 'prouve of payment (image back)',
+        'img_front' => 'prouve of payment (image front)'
 	);
