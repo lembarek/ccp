@@ -14,4 +14,3 @@
     </head>
     <body>
 @include('layout.include.navigation')
-<div class="container">

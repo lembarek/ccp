@@ -1,4 +1,5 @@
-            @include('layout.include.head')
+        @include('layout.include.head')
+        <div class="container">
             @if(isset($info))
             <div class="row">
 	             <div class=" col-sm-8 col-sm-offset-2">
@@ -18,4 +19,5 @@
             </div>
             @endif
             @yield('content')
-            @include('layout.include.footer')
+        </div>
+        @include('layout.include.footer')
