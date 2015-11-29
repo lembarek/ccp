@@ -67,6 +67,10 @@ App::down(function()
 	return Response::make("Be right back!", 503);
 });
 
+Validator::resolver(function ($translator, $data, $rules, $messages) {
+        return new Ccp\ValidationRule($translator, $data, $rules, $messages);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Require The Filters File
