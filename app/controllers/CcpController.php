@@ -74,7 +74,7 @@ class CcpController extends BaseController{
 					'paypal' => 'required|email',
 					'amount' => 'required|integer|min:'.Config::get('constants.buy_min_dollar').'|max:'.Config::get('constants.buy_max_dollar'),
 					'email' => 'email',
-					'phone_number' => 'phone',
+					'phone_number' => 'required|phone',
                                         'img_back' => 'required|max:10000',
                                         'img_front' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
 				));
