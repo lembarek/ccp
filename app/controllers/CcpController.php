@@ -70,13 +70,13 @@ class CcpController extends BaseController{
 	}
 
 	function postBuy(){
-			$validator = Validator::make(Input::get(),array(
+			$validator = Validator::make(Input::all(),array(
 					'paypal' => 'required|email',
 					'amount' => 'required|integer|min:'.Config::get('constants.buy_min_dollar').'|max:'.Config::get('constants.buy_max_dollar'),
 					'email' => 'email',
 					'phone_number' => '',
-                                        'img_back' => 'mimes:jpeg,jpg,png,gif|max:10000',
-                                        'img_front' => 'mimes:jpeg,jpg,png,gif|max:10000',
+                                        'img_back' => 'required|max:10000',
+                                        'img_front' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
 				));
 			if($validator->fails()){
 				return Redirect::route('buy')
