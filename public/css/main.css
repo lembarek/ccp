@@ -5,8 +5,9 @@ body{
     font-size: 20px;
 }
 
-.container{
-    min-height: 100%
+.wrap{
+    min-height: 100%;
+    padding-bottom: 200px;
 }
 footer{
 	color: #999;
