@@ -17,7 +17,7 @@
 					    <h2>{{ Lang::get('ccp.buy_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
-					    <p> {{ Lang::get('ccp.buy_desc') }} </p>
+					    <p class="description-3"> {{ Lang::get('ccp.buy_desc') }} </p>
 			 		    <p><a class="btn btn-primary btn-block"  href="{{ URL::route('buy') }}" >{{ Lang::get('ccp.buy') }}</a></p>
                                         </div>
 			 	@elseif($buy == "no")
@@ -25,7 +25,7 @@
 					    <h2>{{ Lang::get('ccp.buy_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
-			 		    <p> {{ Lang::get('ccp.buy_desc_try_later') }} </p>
+			 		    <p class="description-3"> {{ Lang::get('ccp.buy_desc_try_later') }} </p>
 			 		    <p><a class="btn btn-warning btn-block">{{ Lang::get('ccp.try_after_24')  }}</a></p>
                                         </div>
 			 	@endif
@@ -39,7 +39,7 @@
 					    <h2> {{ Lang::get('ccp.sell_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
-					    <p> {{ Lang::get('ccp.sell_desc') }} </p>
+					    <p class="description-3"> {{ Lang::get('ccp.sell_desc') }} </p>
 					    <p><a class="btn btn-primary btn-block" href="{{ URL::route('sell') }}" >{{ Lang::get('ccp.sell') }}</a></p>
                                         </div>
 				@elseif($sell == "no")
@@ -47,7 +47,7 @@
 					    <h2> {{ Lang::get('ccp.sell_h1') }} </h2>
                                         </div>
                                         <div class="panel-body">
-					    <p> {{ Lang::get('ccp.sell_desc_try_later') }} </p>
+					    <p class="description-3"> {{ Lang::get('ccp.sell_desc_try_later') }} </p>
 					    <p><a class="btn btn-warning btn-block">{{ Lang::get('ccp.try_after_24') }}</a> </p>
                                         </div>
 				@endif
