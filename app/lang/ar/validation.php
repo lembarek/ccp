@@ -112,6 +112,7 @@ return array(
         "country" => "الدولة",
         "address" => "العنوان",
         "phone" => "الهاتف",
+        "phone_number" => "الهاتف",
         "mobile" => "الجوال",
         "age" => "العمر",
         "sex" => "الجنس",
@@ -129,7 +130,15 @@ return array(
         "date" => "التاريخ",
         "time" => "الوقت",
         "available" => "مُتاح",
-        "size" => "الحجم"
+        "size" => "الحجم",
+        'paypal' => 'حساب البايبال',
+        'amount' => 'كمية',
+        'img_back' => 'صورة من الخلف',
+        'img_front' => 'صورة من الأمام',
+        'ccp' => 'س س ب',
+        'paypal_first_name' => 'الإسم في البايبال',
+        'paypal_last_name' > 'اللقب في البايبال',
+
     ),
 
 );
