@@ -4,18 +4,18 @@
         @if(isset($info))
         <div class="row">
                 <div class=" col-sm-8 col-sm-offset-2">
-                        <div class="btn btn-block btn-info">
+                        <p class="btn btn-block btn-info">
                                 {{ $info }}
-                        </div>
+                        </p>
                 </div>
         </div>
         @endif
         @if(Session::has('global'))
         <div class="row">
                 <div class=" col-sm-8 col-sm-offset-2">
-                        <div class="btn btn-block btn-info">
+                        <p class="btn btn-block btn-info">
                             {{ Session::get('global') }}
-                        </div>
+                        </p>
                 </div>
         </div>
         @endif

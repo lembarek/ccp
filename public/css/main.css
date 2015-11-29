@@ -4,6 +4,9 @@ html, body {
 body{
     font-size: 20px;
 }
+.btn-info{
+    font-size: 20px;
+}
 
 .wrap{
     min-height: 100%;
