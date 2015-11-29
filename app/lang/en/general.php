@@ -47,4 +47,5 @@ return array(
 	'prev' => 'prev',
         'info' => 'info',
         'finish' => 'Finish',
+        'browse' => 'Browse',
 	);

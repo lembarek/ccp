@@ -49,30 +49,29 @@
             <div class="input-group">
                 <span class="input-group-btn">
                     <span class="btn btn-primary btn-file">
-                        Browse&hellip;
+                        {{ Lang::get('general.browse') }}&hellip;
                         <input type="file" name="img_back" required="required"  >
                     </span>
                 </span>
                 <input type="text" class="form-control" readonly>
-                @if($errors->has('img_back'))
-                <div class="help-block col-sm-4">{{ $errors->first('img_back')  }}</div>
-                @endif
-            </div>
+           </div>
+            @if($errors->has('img_back'))
+                <div class="help-block">{{ $errors->first('img_back')  }}</div>
+            @endif
 
              <h4>{{Lang::get('ccp.img_front') }}</h4>
             <div class="input-group">
                 <span class="input-group-btn">
                     <span class="btn btn-primary btn-file">
-                        Browse&hellip;
+                        {{ Lang::get('general.browse') }}&hellip;
                         <input type="file" name="img_front" required="required" >
                     </span>
                 </span>
                 <input type="text" class="form-control" readonly>
-                @if($errors->has('img_front'))
-                    <div class="help-block col-sm-4"> {{  $errors->first('img_front')  }}</div>
-                @endif
-
               </div>
+                @if($errors->has('img_front'))
+                    <div class="help-block"> {{  $errors->first('img_front')  }}</div>
+                @endif
                 <br/>
                 <button class="btn btn-primary nextBtn btn-lg <?php if(Session::get('locale') == 'ar') echo 'pull-left'; else echo 'pull-right'; ?>" type="button" >{{ Lang::get('general.next') }}</button>
             </div>

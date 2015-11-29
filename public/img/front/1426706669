@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=R i386 3.1.2
-Exec=env WINEPREFIX="/root/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /root/.wine/dosdevices/c:/users/Public/Desktop/R\\ i386\\ 3.1.2.lnk
-Type=Application
-StartupNotify=true
-Path=/root/.wine/dosdevices/c:/users/root/My Documents
-Icon=0597_Rgui.0

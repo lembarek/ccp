@@ -75,8 +75,8 @@ class CcpController extends BaseController{
 					'amount' => 'required|integer|min:'.Config::get('constants.buy_min_dollar').'|max:'.Config::get('constants.buy_max_dollar'),
 					'email' => 'email',
 					'phone_number' => '',
-                                        'img_back' => '',
-                                        'img_front' => '',
+                                        'img_back' => 'mimes:jpeg,jpg,png,gif|max:10000',
+                                        'img_front' => 'mimes:jpeg,jpg,png,gif|max:10000',
 				));
 			if($validator->fails()){
 				return Redirect::route('buy')
