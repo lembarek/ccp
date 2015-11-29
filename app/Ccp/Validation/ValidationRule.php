@@ -1,4 +1,4 @@
-<?php namespace Ccp;
+<?php namespace Ccp\Validation;
 
 class ValidationRule extends \Illuminate\Validation\Validator {
 

@@ -30,6 +30,7 @@ return array(
     "boolean"          => "يجب أن تكون قيمة الحقل :attribute إما true أو false ",
     "confirmed"        => "حقل التأكيد غير مُطابق للحقل :attribute",
     "date"             => "الحقل :attribute ليس تاريخًا صحيحًا",
+    "phone"             => "الحقل :attribute ليس رقم هاتف  صحيحًا",
     "date_format"      => "لا يتوافق الحقل :attribute مع الشكل :format.",
     "different"        => "يجب أن يكون الحقلان :attribute و :other مُختلفان",
     "digits"           => "يجب أن يحتوي الحقل :attribute على :digits رقمًا/أرقام",

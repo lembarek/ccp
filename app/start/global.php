@@ -68,7 +68,7 @@ App::down(function()
 });
 
 Validator::resolver(function ($translator, $data, $rules, $messages) {
-        return new Ccp\ValidationRule($translator, $data, $rules, $messages);
+        return new Ccp\Validation\ValidationRule($translator, $data, $rules, $messages);
 });
 
 /*
