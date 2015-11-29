@@ -30,7 +30,7 @@
                 <h3> {{ Lang::get('steps.step1') }} </h3>
                 <div class="form-group">
                     <label class="control-label">{{ Lang::get('ccp.amount') }}</label>
-                    <input type="number" name="amount" (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }} maxlength="100"  required="required" class="form-control" placeholder=""  />
+                    <input type="number" name="amount" (Input::old('amount'))? 'value='.e(Input::old('amount')):'' }} min="{{ Config::get('constants.sell_min_dollar') }}"   max="{{ Config::get('constants.sell_max_dollar' ) }}"  required="required" class="form-control" placeholder=""  />
                     @if($errors->has('amount'))
                         <div class="help-block col-sm-4">{{ $errors->first('amount') }}</div>
                     @endif
