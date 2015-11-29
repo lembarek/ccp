@@ -2,7 +2,7 @@
             @if(isset($info))
             <div class="row">
 	             <div class=" col-sm-8 col-sm-offset-2">
-                            <div class="btn btn-warning">
+                            <div class="btn btn-block btn-info">
 	                            {{ $info }}
                             </div>
 	             </div>
@@ -11,7 +11,7 @@
             @if(Session::has('global'))
             <div class="row">
                     <div class=" col-sm-8 col-sm-offset-2">
-                            <div class="btn btn-warning">
+                            <div class="btn btn-block btn-info">
                                 {{ Session::get('global') }}
                             </div>
                     </div>
