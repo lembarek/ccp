@@ -89,7 +89,7 @@
                     @endif
                 </div>
                  <div class="form-group">
-                    <label class="control-label">{{ Lang::get('general.phone_number') }}({{ Lang::get('general.optional') }})</label>
+                    <label class="control-label">{{ Lang::get('general.phone_number') }}</label>
                     <input type="number" name="phone_number" {{ (Input::old('phone_number'))? 'value='.e(Input::old('phone_number')):'' }}  required='required' maxlength="10" minlength="9" class="form-control" placeholder="" >
                     @if($errors->has('phone_number'))
                         <div class="help-block col-sm-4">{{ $errors->first('phone_number') }}</div>
