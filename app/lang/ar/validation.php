@@ -137,7 +137,7 @@ return array(
         'img_front' => 'صورة من الأمام',
         'ccp' => 'س س ب',
         'paypal_first_name' => 'الإسم في البايبال',
-        'paypal_last_name' > 'اللقب في البايبال',
+        'paypal_last_name' => 'اللقب في البايبال',
 
     ),
 

@@ -131,6 +131,14 @@ return array(
         "time" => "Heure",
         "available" => "Disponible",
         "size" => "Taille"
+        'paypal' => 'paypal',
+        'amount' => 'montant',
+        'img_back' => 'image arrière',
+        'img_front' => 'image avant',
+        'ccp' => 'ccp',
+        'paypal_first_name' => 'paypal nom',
+        'paypal_last_name' => 'paypal prénom',
+
     ),
 
 );

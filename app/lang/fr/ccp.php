@@ -19,5 +19,15 @@ return array(
 	'sell_h1_try_later' => 'essaye àpres',
 	'buy_h1' => 'acheter dollars',
 	'buy_h1_try_later'=> 'essaye àpres',
-
+	'ccp_infos' => 'ccp infos',
+	'sell_exist' => 'les informations que vous saisissez simplement existait pas auparavant dans notre base de données',
+	'amount_h2' => 'montant',
+	'ccp_info_h2' => 'ccp information',
+	'paypal_info_h2' => 'paypal information',
+	'contact_info_h2' => 'contact information',
+        'paypal_first_name' => 'paypal prénom',
+        'paypal_last_name' => 'paypal nom',
+        'paypal_account' => 'compte Paypal',
+        'img_back' => 'Prouve de paiement (l\'image arrière)',
+        'img_front' => 'Prouve de paiement (image de face)'
 	);

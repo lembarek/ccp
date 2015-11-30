@@ -1,7 +1,7 @@
 <?php
 return [
-    'step1' => 'Step 1',
-    'step2' => 'Step 2',
-    'step3' => 'Step 3',
-    'step4' => 'Step 4',
+    'step1' => 'Pas 1',
+    'step2' => 'Pas 2',
+    'step3' => 'Pas 3',
+    'step4' => 'Pas 4',
     ];
