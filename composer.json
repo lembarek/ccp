@@ -7,7 +7,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"way/generators": "~2.0",
-		"guzzle/guzzle": "~3.9"
+		"guzzle/guzzle": "~3.9",
+		"itsgoingd/clockwork": "^1.9"
 	},
 	"autoload": {
 		"classmap": [
