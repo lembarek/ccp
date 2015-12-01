@@ -69,10 +69,6 @@ class AccountController extends BaseController {
 //                Mail::send('emails.auth.activate', array('link' => URL::route('account-activate',$code) ,'username'=>$username), function($message) use ($user){
 //                    $message->to($user->email, $user->username)->subject('active your account');
 //                });
-                Coin::create(array(
-                    'coins' => 0,
-                    'user_id' => User::where('email','=',$email)->first()->id
-                    ));
                 return Redirect::route('home')
                                 ->with('global', Lang::get('general.account-create-success'));
             }
