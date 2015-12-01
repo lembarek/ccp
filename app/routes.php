@@ -41,6 +41,11 @@ Route::get('/signin',array(
     'uses' => 'AccountController@getSignIn'
 ));
 
+Route::post('/signin',array(
+    'as' => 'account-sign-in-post',
+    'uses' => 'AccountController@postSignIn'
+));
+
 Route::get('/account/activate/{code}',array(
     'as' => 'account-activate',
     'uses' => 'AccountController@getActivate'
@@ -56,26 +61,20 @@ Route::group(array('before'=>'auth'), function(){
 });
 
 
-Route::group(array('before'=> 'guest'), function(){
 
-    Route::group(array('before' => 'csrf'), function(){
-        Route::post('/create',array(
-            'as' => 'account-create-post',
-            'uses' => 'AccountController@postCreate'
-        ));
-    });
-
-    Route::get('/create',array(
-        'as' => 'account-create',
-        'uses' => 'AccountController@getCreate'
-    ));
-
-
-    Route::post('/sign_in',array(
-        'as' => 'account-sign-in-post',
-        'uses' => 'AccountController@postSignIn'
+Route::group(array('before' => 'csrf'), function(){
+    Route::post('/create',array(
+        'as' => 'account-create-post',
+        'uses' => 'AccountController@postCreate'
     ));
 });
+
+Route::get('/create',array(
+    'as' => 'account-create',
+    'uses' => 'AccountController@getCreate'
+));
+
+
 
 
 /* route of paypal */
@@ -144,6 +143,15 @@ Route::get('/language',array(
     ));
 
 // admin routes
+//
+//
+Route::group(array('before' => ['auth', 'admin']),function(){
+
+Route::get('/admin', [
+    'as' => 'admin',
+    'uses' => 'AdminController@index',
+    ]);
+
 
 Route::get('/admin/buyers/search', array(
     'as' => 'admin_buyers_search',
@@ -163,4 +171,4 @@ Route::get('/admin/buyers', array(
     'as' => 'admin_buyers',
     'uses' => 'AdminController@postbuyers',
     ));
-
+});

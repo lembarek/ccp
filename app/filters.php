@@ -33,8 +33,8 @@ App::after(function($request, $response)
 |
 */
 
-Route::filter('auth_admin',function(){
-
+Route::filter('admin',function(){
+    if(!Auth::user()->hasRole('admin')) return Redirect::route('home');
 });
 
 Route::filter('auth', function()
