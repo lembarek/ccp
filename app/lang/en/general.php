@@ -40,7 +40,7 @@ return array(
 	'first_name' => 'first name',
 	'last_name' => 'last name',
 	'name' => 'name',
-	'password_again' => 'password again',
+	'password_confirmation' => 'password confirmation',
 	'create_account' => 'create account',
 	'lang' => 'langue',
 	'next' => 'next',

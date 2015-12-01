@@ -9,7 +9,6 @@ class AdminController extends BaseController{
 		}
 
 
-
 		public function post_signin()
 		{
 			$validator = Validator::make(Input::all(), array(
@@ -31,6 +30,7 @@ class AdminController extends BaseController{
 			}
 		}
 
+
 		public function get_signup()
 		{
 			return View::make('admin.sign_up');
@@ -41,8 +41,7 @@ class AdminController extends BaseController{
 		{
 			$validator = Validator::make(Input::all(), array(
 			            'name' => 'required',
-			            'password' => 'required',
-			            'password_again' => 'required|same:password',
+			            'password' => 'required|confirmed',
 			));
 			if ($validator->fails()) {
 			    return Redirect::route('admin_signup')
@@ -78,13 +77,11 @@ class AdminController extends BaseController{
                     return $this->get_buyers();
                 }
 
+
                 public function getBuyers()
                 {
                     return View::make('admin.buyer.search');
                 }
-
-
-
 
 
 }

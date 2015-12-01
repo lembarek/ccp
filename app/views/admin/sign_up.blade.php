@@ -29,12 +29,12 @@ sign up | admin | ccp
         @endif
     </div>
     <div class="form-group">
-        <label class="control-label col-sm-2">{{ Lang::get('general.password_again') }}: </label>
+        <label class="control-label col-sm-2">{{ Lang::get('general.password_confirmation') }}: </label>
         <div class="col-sm-6">
-            <input class="form-control" type="password" name="password_again"  {{ Input::old('password_again')? "value='".Input::old('password_again')."'":""  }} placeholder="{{ Lang::get('general.password_again') }}" >
+            <input class="form-control" type="password" name="password_confirmation"  {{ Input::old('password_confirmation')? "value='".Input::old('password_confirmation')."'":""  }} placeholder="{{ Lang::get('general.password_confirmation') }}" >
         </div>
-        @if($errors->has('password_again'))
-            <div class="help-block col-sm-4">{{ $errors->first('password_again') }}</div>
+        @if($errors->has('password_confirmation'))
+            <div class="help-block col-sm-4">{{ $errors->first('password_confirmation') }}</div>
         @else
             <div class="help-block col-sm-4"></div>
         @endif
@@ -44,6 +44,6 @@ sign up | admin | ccp
             <input class="btn btn-default" type="submit"  value="{{ Lang::get('general.create_account') }}"/>
         </div>
     </div>
-    
-</form>				
-@stop	
+
+</form>
+@stop
