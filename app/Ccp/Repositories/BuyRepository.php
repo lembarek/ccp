@@ -13,4 +13,16 @@ class BuyRepository extends Repository implements BuyInterface
         $this->model = $buy;
     }
 
+    /**
+     * check if the buy is active
+     *
+     * @return boolean
+     */
+    public function isActive()
+    {
+        return $this->model->where('activate','=',0)->sum('amount') < \Config::get('constants.buy_avialable_dollar');
+
+    }
+
+
 }

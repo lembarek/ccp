@@ -1,30 +1,41 @@
 <?php
 
+use Ccp\Interfaces\BuyInterface;
+
+use Ccp\Interfaces\SellInterface;
+
 class HomeController extends BaseController {
+
+    protected $buyRepo;
+
+    protected $sellRepo;
+
+    public function __construct(BuyInterface $BuyRepo, SellInterface $SellRepo)
+    {
+        $this->buyRepo = $BuyRepo;
+        $this->sellRepo = $SellRepo;
+    }
+
 
     public function home(){
 
-        $role = Role::whereName('admin')->first();
-        $sell = "no"; $buy = "no";
-        if(Sell::where('activate','=',0)->sum('amount') < Config::get('constants.sell_avialable_dollar')){
-                $sell = 'yes';
-        };
-        if(Buy::where('activate','=',0)->sum('amount') < Config::get('constants.buy_avialable_dollar')){
-                $buy = "yes";
-        };
-        return View::make('home')
-            ->with('sell', $sell)
-            ->with('buy', $buy);
+        $sell = $this->sellRepo->isActive();
+        $buy = $this->buyRepo->isActive();
+
+        return View::make('home', compact('sell', 'buy'));
     }
+
 
     public function terms(){
     	$terms = Lang::get('terms');
     	return View::make('general.terms')->with('terms',$terms);
     }
 
+
     public function AboutMe(){
     	return View::make('general.AboutMe');
     }
+
 
     public function faq(){
         $faqs = Lang::get('faq');
@@ -32,9 +43,11 @@ class HomeController extends BaseController {
         ->with('faqs',$faqs);
     }
 
+
     public function GetContactMe(){
         return View::make('general.contact_me');
     }
+
 
     public function PostContactme(){
         $validator = Validator::make(Input::all(),array(
@@ -58,6 +71,7 @@ class HomeController extends BaseController {
         }
     }
 
+
     /**
      * show the informaiton about the us
      *
@@ -67,4 +81,5 @@ class HomeController extends BaseController {
     {
         return  View::make('general.info');
     }
+
 }
