@@ -8,6 +8,7 @@ class AdminControllerTest extends TestCase {
     public function it_go_to_admin_page()
     {
         $this->client->request('GET', '/admin');
+        $this->assertTrue($this->client->getResponse()->isOk());
     }
 
 
@@ -17,6 +18,7 @@ class AdminControllerTest extends TestCase {
     public function it_show_all_buys()
     {
         $this->client->request('GET', '/acp/buys');
+        $this->assertTrue($this->client->getResponse()->isOk());
     }
 
 

@@ -7,7 +7,9 @@ class HomeControllerTest extends TestCase {
     */
     public function it_go_to_home()
     {
-       $this->client->request('GET', '/');
+        $this->client->request('GET', '/');
+
+        $this->assertTrue($this->client->getResponse()->isOk());
     }
 
 }

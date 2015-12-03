@@ -4,7 +4,7 @@
                 <div class="row">
                             <div class="col-md-12">
                                 <h4 class="text-center">
-                                    {{ lang::get('pages/home.description'); }}
+                                    {{ Lang::get('pages/home.description'); }}
                                 </h4>
                             </div>
                         </div>
