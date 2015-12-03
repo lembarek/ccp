@@ -9,7 +9,7 @@ class AdminController extends BaseController{
      */
     public function index()
     {
-        dd('admin');
+        return View::make('acp.home.index');
     }
 
 
@@ -33,7 +33,7 @@ class AdminController extends BaseController{
 
     public function getBuyers()
     {
-        return View::make('admin.buyer.search');
+        return View::make('acp.buyer.search');
     }
 
 

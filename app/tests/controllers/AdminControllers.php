@@ -10,4 +10,14 @@ class AdminControllerTest extends TestCase {
         $this->client->request('GET', '/admin');
     }
 
+
+    /**
+    * @test
+    */
+    public function it_show_all_buys()
+    {
+        $this->client->request('GET', '/acp/buys');
+    }
+
+
 }

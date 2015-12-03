@@ -165,10 +165,9 @@ Route::get('/info', [
     ]);
 
 
-
-
-Route::get('/admin/buyers', array(
-    'as' => 'admin_buyers',
-    'uses' => 'AdminController@postbuyers',
+Route::get('/acp/buys', array(
+    'as' => 'acp.buys',
+    'uses' => 'AcpController@getBuys',
     ));
+
 });
