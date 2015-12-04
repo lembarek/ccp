@@ -27,20 +27,19 @@ class HomeController extends BaseController {
 
 
     public function terms(){
-    	$terms = Lang::get('terms');
-    	return View::make('general.terms')->with('terms',$terms);
+        $terms = Lang::get('terms');
+        return View::make('general.terms', compact('terms'));
     }
 
 
     public function AboutMe(){
-    	return View::make('general.AboutMe');
+        return View::make('general.AboutMe');
     }
 
 
     public function faq(){
         $faqs = Lang::get('faq');
-        return View::make('general.faq')
-        ->with('faqs',$faqs);
+        return View::make('general.faq', compact('faqs'));
     }
 
 

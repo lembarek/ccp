@@ -12,4 +12,14 @@ class HomeControllerTest extends TestCase {
         $this->assertTrue($this->client->getResponse()->isOk());
     }
 
+    /**
+    * @test
+    */
+    public function it_go_terms_page()
+    {
+        $this->client->request('GET', '/terms');
+        $this->assertTrue($this->client->getResponse()->isOk());
+    }
+
+
 }

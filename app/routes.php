@@ -24,10 +24,6 @@ Route::get('/contact_me',array(
         'uses' => 'HomeController@GetContactMe',
     ));
 
-Route::get('/global',array(
-    'as' => 'global',
-    'uses' => 'HomeController@global'
-    ));
 
 Route::post('/contact_me',array(
         'as' => 'contact_me',
