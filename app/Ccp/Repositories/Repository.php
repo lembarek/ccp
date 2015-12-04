@@ -12,4 +12,16 @@ abstract class Repository
         $this->model->all();
     }
 
+
+    /**
+     * create a new record
+     *
+     * @param  array  $input
+     * @return Models
+     */
+    public function create($input)
+    {
+        return $this->model->create($input);
+    }
+
 }

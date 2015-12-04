@@ -19,15 +19,15 @@ Route::get('/faq',array(
     'uses' => 'HomeController@faq',
     ));
 
-Route::get('/contact_me',array(
-        'as' => 'contact_me',
-        'uses' => 'HomeController@GetContactMe',
+Route::get('/contact_us',array(
+        'as' => 'contact_us',
+        'uses' => 'HomeController@GetContactUs',
     ));
 
 
-Route::post('/contact_me',array(
-        'as' => 'contact_me',
-        'uses' => 'HomeController@postContactMe',
+Route::post('/contact_us',array(
+        'as' => 'contact_us',
+        'uses' => 'HomeController@postContactUs',
         'before' => ['csrf'],
     ));
 

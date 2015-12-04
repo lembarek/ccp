@@ -35,6 +35,11 @@ class CcpServiceProvider extends ServiceProvider {
             'Ccp\Repositories\SellRepository'
         );
 
+         $this->app->bind(
+            'Ccp\Interfaces\ContactUsInterface',
+            'Ccp\Repositories\ContactUsRepository'
+        );
+
     }
 
 }

@@ -4,16 +4,21 @@ use Ccp\Interfaces\BuyInterface;
 
 use Ccp\Interfaces\SellInterface;
 
+use Ccp\Interfaces\ContactUsInterface;
+
 class HomeController extends BaseController {
 
     protected $buyRepo;
 
     protected $sellRepo;
 
-    public function __construct(BuyInterface $BuyRepo, SellInterface $SellRepo)
+    protected $ContactUsRepo;
+
+    public function __construct(BuyInterface $buyRepo, SellInterface $sellRepo, ContactUsInterface $contactUsRepo)
     {
-        $this->buyRepo = $BuyRepo;
-        $this->sellRepo = $SellRepo;
+        $this->buyRepo = $buyRepo;
+        $this->sellRepo = $sellRepo;
+        $this->contactUsRepo = $contactUsRepo;
     }
 
 
@@ -43,27 +48,27 @@ class HomeController extends BaseController {
     }
 
 
-    public function GetContactMe(){
-        return View::make('general.contact_me');
+    public function GetContactUs(){
+        return View::make('general.contact_us');
     }
 
 
-    public function PostContactme(){
+    public function PostContactus(){
         $validator = Validator::make(Input::all(),array(
                 'subject' => 'required|min:6',
                 'message' => 'required|min:20'
             ));
         if($validator->fails()){
-            return Redirect::route('contact_me')
+            return Redirect::route('contact_us')
                             ->withErrors($validator)
                             ->withInput();
         }else{
-            $contact_me  = ContactMe::create(array(
+            $contact_us  = $this->contactUsRepo->create(array(
                 'subject' => Input::get('subject'),
                 'message' => Input::get('message'),
                 'status' => 'not_readed',
                 ));
-            if($contact_me){
+            if($contact_us){
                 return Redirect::route('home')
                         ->with('global',Lang::get('general.contact_me_success'));
             }
