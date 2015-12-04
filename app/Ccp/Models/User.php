@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends \Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
@@ -15,15 +15,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $hidden = array('password', 'remember_token');
 
-	public function Coin(){
-		return $this->hasOne('Coin');
-	}
-	public function refers(){
-		return $this->hasMany('Refer');
-	}
        public function roles()
         {
-            return $this->belongsToMany('Role');
+            return $this->belongsToMany('Ccp\Models\Role');
         }
 
         public function hasRole($name)
