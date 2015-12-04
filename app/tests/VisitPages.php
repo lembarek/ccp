@@ -27,6 +27,8 @@ class VisitPagesTest extends TestCase {
                 ['admin'],
                 ['info'],
                 ['acp.buys'],
+                ['buy'],
+                ['sell'],
             ];
     }
 

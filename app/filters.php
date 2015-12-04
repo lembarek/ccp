@@ -99,16 +99,14 @@ Route::filter('csrf', function()
 //* my filter *///
 
 Route::filter('sell',function(){
-		$all_amount = Sell::where('activate','=',0)->sum('amount');
-		if(Config::get('constants.sell_avialable_dollar') < $all_amount){
+		if(!App::make('Ccp\Repositories\SellRepository')->isActive()){
 			return Redirect::to('/');
 		}
 });
 
 
 Route::filter('buy',function(){
-	$all_amount = Buy::where('activate','=',0)->sum('amount');
-	if(Config::get('constants.buy_avialable_dollar') < $all_amount){
+	if(!App::make('Ccp\Repositories\BuyRepository')->isActive()){
 		return Redirect::to('/');
 	}
 });
